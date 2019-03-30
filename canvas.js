@@ -1,4 +1,16 @@
 //根据input等获取的file文件用canvas进行图片预览---等等
+			var val = []
+					var imgg = new Image();
+					imgg.src = $(thiss).attr('src')
+					imgg.onload = function() {
+						var kkks = getBase64Show(imgg, 500);
+						var srcurl = kkks[0].ulr
+						var exturl = kkks[0].ext
+						val.push(srcurl)
+						val.push(exturl)
+						contentHash[index] = val
+
+//代码片段
 function getBase64Show(img, maxLen) {
 	console.log(img)
 	var Arr = [];
